@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <img src="img/logoLari.png" alt="">
+    </header>
+    <h3 class="heading">POOL DE LIQUIDACIÓN</h3>
+    <div class="container">
+
+        <div class="main-video">
+            <div class="video-uno">
+                 <video src="videos/presentacionPool.mp4" controls muted autoplay></video>
+                 <h3 class="title">Presentacion Pool</h3>
+            </div>
+        </div>
+
+        <div class="video-list">
+              
+            <div class="vid">
+                <video src="videos/presentacionPool.mp4" controls muted autoplay></video>
+                <h3 class="title">¿Que es lo que hacemos como POOL de liquidación?</h3>
+            </div>
+            <div class="vid">
+                <video src="videos/recorrido TOA.mp4" controls muted autoplay></video>
+                <h3 class="title">Recorrido TOA</h3>
+            </div>
+            <div class="vid">
+                <video src="videos/aveHfc.mp4" controls muted autoplay></video>
+                <h3 class="title">Avería HFC</h3>
+            </div>
+            <div class="vid">
+                <video src="videos/averia GPON.mp4" controls muted autoplay></video>
+                <h3 class="title">Avería GPON</h3>
+            </div>
+            <div class="vid">
+                <video src="videos/instHfc.mp4" controls muted autoplay></video>
+                <h3 class="title">Instalacion HFC</h3>
+            </div>
+
+            <div class="vid">
+                <video src="videos/instGpon.mp4" controls muted autoplay></video>
+                <h3 class="title">Instalacion GPON</h3>
+            </div>
+        </div>
+        
+
+    </div>
+    <script>
+
+        let listVideo = document.querySelectorAll('.video-list .vid');
+        let mainVideo = document.querySelector('.main-video video');
+        let title = document.querySelector('.main-video .title');
+
+        listVideo.forEach(video =>{
+            video.onclick = () =>{
+                listVideo.forEach(vid => vid.classList.remove('active') );
+                video.classList.add('active');
+                if(video.classList.contains('active')) {
+                    let src=video.children[0].getAttribute('src');
+                    mainVideo.src = src;
+                    let text = video.children[1].innerHTML;
+                    title.innerHTML =text;
+                }
+
+            };
+
+        });
+
+    </script>
+</body>
+</html>
