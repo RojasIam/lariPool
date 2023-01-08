@@ -7,26 +7,73 @@
 }
 
 body{
-    background: rgb(223, 238, 245);
+    background: rgb(1, 16, 22);
+    /*
+    background-image: linear-gradient(135deg,#050574,#070818,#061552,#08074d,#1b065f,
+    #0d0436,#070707);
+    */
+    /*
+    background-image: linear-gradient(135deg,#f2f2f7,#a8c8ec,#4e99e0,#83a4c9,#719cb9,
+    #3a72bb,#88a0c4);*/
+    background-size: 500%;
+    animation:animafond 10s infinite ;
+}
+h1,h3{
+
+    font-family: 'Rowdies', cursive;
+}
+
+@keyframes animafond{
+    0%{
+        background-position: 0% 50%;
+    }
+
+    50%{
+        background-position: 100% 50%;
+    }
+
+    100%{
+        background-position: 0% 50%;
+    }
 }
 
 header{
     
-    background-size: 450px ;
-    
-    text-align: center;
-   
+    display: flex;
+    padding: 25px;
+    margin-bottom: 40px;
+    background-image: url(../img/portadab.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    box-shadow: 3px 10px 10px rgb(68, 102, 141);
 }
+.div-header{
 
-img{
-   
-    width: 200px;
+justify-content: center;
+}
+.logo{
+
+    width: 80px;
+    margin-left: 0px;
     animation-name: efectologo;
     animation-duration: 10s;
     animation-timing-function:linear;
     animation-iteration-count: infinite;
 }
 
+.letraLogo{
+    width: 50px; 
+    margin-left: 12px;
+
+}
+
+.pool{
+text-align: center;
+color: white;
+font-size: 60px;
+
+}
 @keyframes efectologo{
     from{
         transform: perspective(400px) rotatey(0deg);
@@ -38,8 +85,9 @@ img{
 }
 
 .heading{
-    color: rgb(0, 0, 0);
-    font-size: 40px;
+
+    color: rgb(255, 255, 255);
+    font-size: 45px;
     text-align: center;
     padding: 10px;
 
@@ -63,10 +111,12 @@ video{
 }
 
 .container .main-video{
-    background: rgb(145, 179, 207);
+    background: rgb(178, 190, 202);
+ 
+    background-size: cover;
     border-radius: 5px;
     padding: 10px;
-
+   
 }
 .container .main-video video{
     width: 100%;
@@ -75,7 +125,7 @@ video{
 }
 
 .container .main-video .title{
-    color: rgb(2, 2, 2);
+    color: rgb(13, 68, 94);
     font-size: 24px;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -84,13 +134,21 @@ video{
 }
 
 .container .video-list{
-    background: rgb(252, 252, 252);
+    background: rgb(178, 190, 202);
+   
+    background-size: cover;
     border-radius: 5px;
     height: 100%;
     overflow-y: scroll;
+    
 }
 
+.container .video-list h1{
+    color: rgb(13, 68, 94);
+    margin-top: 10px;
+    text-align: center;
 
+}
 .container .video-list::-webkit-scrollbar{
     width: 7px;
 
@@ -123,12 +181,13 @@ video{
     display: flex;
     align-items: center;
     gap: 15px;
-    background: rgb(145, 179, 207);
+    background: rgb(252, 252, 252);
     border: 5px;
-    margin: 10px;
+    margin: 20px;
     padding: 10px;
     border:none;
     cursor: pointer;
+    box-shadow: 3px 10px 10px rgb(68, 102, 141);
 }
 
 .container .video-list .vid:hover{
@@ -144,7 +203,7 @@ video{
 }
 
 .container .video-list .vid.active .title{
-    color: aqua;
+    color: rgb(255, 255, 255);
 
 
 }
@@ -155,7 +214,12 @@ video{
 
 
 }
-
+footer{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: white;
+}
 /*responsive*/
 
 @media (max-width:991px){
