@@ -251,3 +251,20 @@ footer{
     }
 
 }
+
+@media (max-width:480px){
+    
+
+    header{
+        display: flex;
+        flex-direction: column;
+
+    }
+    .pool{
+        font-size: 35px;
+    }
+    .heading{
+        font-size: 25px;
+
+    }
+}
